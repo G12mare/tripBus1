@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -16,6 +17,7 @@
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Trip-Bus | Agencia de viajes </title>
 </head>
+
 <body>
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
@@ -395,7 +397,37 @@
     <script src="assets/js/counterup.min.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/dashboard-custom.js"></script>
+    
 </body>
+
 
 <!-- Mirrored from cyclonethemes.com/demo/html/padhai/dashboard-addtour.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Feb 2020 09:01:50 GMT -->
 </html>
+<script>
+    // Validación y funciones
+    function validateForm() {
+       var title = document.getElementById('title').value;
+       var description = document.getElementById('description').value;
+       var groupSize = document.getElementById('groupSize').value;
+       var priceSale = document.getElementById('priceSale').value;
+
+       if (title == "" || description == "" || groupSize == "" || priceSale == "") {
+           alert("Por favor, completa todos los campos.");
+           return false;
+       }
+       return true;
+    }
+
+    function saveDraft() {
+       if (validateForm()) {
+           alert("Borrador guardado exitosamente.");
+       }
+    }
+
+    function publish() {
+       if (validateForm()) {
+           alert("¡Paquete publicado con éxito!");
+       }
+    }
+
+    document.getElementById('imageUpload').addEventListener
